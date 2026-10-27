@@ -1,25 +1,18 @@
 ---
 layout: default
 nav_order: 2
-title: Objectifs du projet
+title:  Edge-computing-par-TinyML-sur-ESP32
 ---
-
-# Objectifs du projet
-
-{: .a_supprimer }
-> Cette page pose le besoin **avant** toute solution technique : on y dit *quoi*
-> faire, pas *comment*. Répondez aux questions de chaque section, puis supprimez-les.
-> Voir [Définir son besoin et son cahier des charges](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/concepts/definir-son-besoin/).
 
 ## Contexte
 
-{: .a_modifier }
-> D'où vient le projet ? Qui l'a demandé ? Dans quel cadre (cours, concours, commande) ?
+Projet réalisé dans le cadre d’un stage de 2 mois à UniLaSalle Amiens, sur un sujet proposé et encadré par Jérôme Gorin, avec le matériel du MakerSpace. C’est la première étape d’un programme en trois cas d’usage (objets, expressions faciales, anonymisation de données médicales).
 
 ## Problème et public cible
 
-{: .a_modifier }
-> Quel problème cherchez-vous à résoudre ? Pour qui ? Dans quelles conditions d'utilisation ?
+Analyser des images par IA sans passer par le cloud (latence, dépendance au réseau, confidentialité), en faisant tenir un modèle dans les limites d’un microcontrôleur ESP32 (mémoire, puissance, vitesse d’inférence).
+Les étudiants (guide pédagogique reproductible), puis les acteurs de la santé (anonymisation locale de données médicales).
+Fonctionnement autonome et en temps réel sur la carte, sans réseau, avec au moins 80 % de précision, 2 images par seconde et un modèle de 300 Ko au maximum, et des images qui ne quittent jamais l’appareil.
 
 ## Cahier des charges
 
@@ -29,9 +22,11 @@ title: Objectifs du projet
 > **FC** pour une fonction contrainte (ce à quoi il doit s'adapter).
 > Flexibilité : de F0 (impératif) à F3 (négociable). Exemple :
 
-| Fonction | Critère | Niveau attendu | Flexibilité |
-|---|---|---|---|
-| FP1 : trier les déchets | Taux de tri correct | ≥ 80 % sur 20 essais | F1 |
-| FP2 : informer le visiteur | Lisibilité du panneau | Lisible à 2 m | F2 |
-| FC1 : s'alimenter | Autonomie sur batterie | ≥ 4 h | F0 |
-| FC2 : s'intégrer au tapis | Largeur | ≤ 1 m | F0 |
+| Fonction                                                           | Critère                                                                       | Niveau attendu                                        | Flexibilité |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------|-------------|
+|FP1 : reconnaître un chien, un chat ou « rien » devant la caméra    |	Précision sur un jeu de test réel (images prises par la caméra de la carte)   |	≥ 80 %                                               	|     F1     |
+|FP2 : analyser en temps réel                                        | 	Débit d'inférence (soit ≤ 500 ms par image)                                   |	≥ 2 images par seconde                                 |    F1     |
+|FP3 : permettre aux étudiants de reproduire la chaîne               |   Guide pas à pas suivi par un etudiant                                        | Reproduite par un étudiant sans aide                   |	  F1     |
+|FC1 : tenir dans la mémoire de la carte                             |  Taille du modèle .tflite                                                      |  ≤ 300 Ko                                              |    F1     |    |FC2 : fonctionner sans réseau                                       |   Image transmises hors de la carte                                            |  0                                                    |    F0     |
+|FC3 : protéger les données personnelles                             |  Photos de personnes avec consentement                                         | 100%                                                  |    F0      |
+
