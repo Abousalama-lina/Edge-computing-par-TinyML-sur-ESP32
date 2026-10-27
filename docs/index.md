@@ -5,24 +5,17 @@ title: Accueil
 permalink: /
 ---
 
-{: .a_supprimer }
-> Ce site est le **template de documentation** de votre projet. Tout ce qui est
-> marqué « À modifier » est un exemple à remplacer par votre contenu, tout ce qui
-> est marqué « À supprimer » est une consigne à retirer avant le rendu final.
->
-> Le découpage des pages est un **point de départ** : ajoutez, renommez, divisez
-> les pages selon les besoins de votre projet.
->
-> Les guides pour prendre en main ce template sont sur le
-> [site de documentation du MakerSpace](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/).
 
-# Nom du projet
+# Edge-computing-par-TinyML-sur-ESP32
 
 {: .a_modifier }
 > Remplacez le titre ci-dessus et le texte ci-dessous par une présentation de votre projet.
 
-Décrivez ici en quelques lignes l'objectif de votre projet. Quel est son but ?
-À qui est-il destiné ? Quel problème cherche-t-il à résoudre ?
+Ce projet a pour but de mettre en place une chaîne complète d’edge computing par TinyML : un modèle d’IA léger est entraîné sur PC avec TensorFlow, compressé (quantification int8, format TensorFlow Lite), puis déployé sur un microcontrôleur ESP32 équipé d’une caméra. La carte analyse les images en temps réel, directement là où elles sont produites, sans connexion réseau ni serveur distant. La reconnaissance d’un chien et d’un chat sert de cas d’usage démonstrateur.
+
+Il s’adresse d’abord aux étudiants, grâce à un guide pédagogique pas à pas qui leur permettra de reproduire la démarche et de l’adapter à d’autres cas d’usage. À terme, il vise les acteurs de la santé (télé-expertise, recherche, enseignement, médecine de terrain).
+
+L’analyse d’images par IA passe souvent par le cloud, avec de la latence, une dépendance au réseau et des risques pour la confidentialité. Le projet réalise cette analyse en local sur un ESP32 avec caméra, en relevant le défi des contraintes d’un système embarqué (mémoire limitée, rapidité d’inférence, précision après compression). Il fournit une chaîne reproductible pour les étudiants et prépare l’anonymisation locale de données de santé.
 
 [Notre repo GitHub]({{ site.gh_edit_repository }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Notre projet sur Onshape](https://cad.onshape.com/){: .btn .fs-5 .mb-4 .mb-md-0 }
