@@ -16,12 +16,6 @@ Fonctionnement autonome et en temps réel sur la carte, sans réseau, avec au mo
 
 ## Cahier des charges
 
-{: .a_modifier }
-> Listez les fonctions attendues avec des critères **mesurables** :
-> **FP** pour une fonction principale (ce que le projet doit faire),
-> **FC** pour une fonction contrainte (ce à quoi il doit s'adapter).
-> Flexibilité : de F0 (impératif) à F3 (négociable). Exemple :
-
 | Fonction                                                           | Critère                                                                       | Niveau attendu                                        | Flexibilité |
 |--------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------|-------------|
 |FP1 : reconnaître un chien, un chat ou « rien » devant la caméra    |	Précision sur un jeu de test réel (images prises par la caméra de la carte)   |	≥ 80 %                                               	|     F1     |
