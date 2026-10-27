@@ -8,9 +8,6 @@ permalink: /
 
 # Edge-computing-par-TinyML-sur-ESP32
 
-{: .a_modifier }
-> Remplacez le titre ci-dessus et le texte ci-dessous par une présentation de votre projet.
-
 Ce projet a pour but de mettre en place une chaîne complète d’edge computing par TinyML : un modèle d’IA léger est entraîné sur PC avec TensorFlow, compressé (quantification int8, format TensorFlow Lite), puis déployé sur un microcontrôleur ESP32 équipé d’une caméra. La carte analyse les images en temps réel, directement là où elles sont produites, sans connexion réseau ni serveur distant. La reconnaissance d’un chien et d’un chat sert de cas d’usage démonstrateur.
 
 Il s’adresse d’abord aux étudiants, grâce à un guide pédagogique pas à pas qui leur permettra de reproduire la démarche et de l’adapter à d’autres cas d’usage. À terme, il vise les acteurs de la santé (télé-expertise, recherche, enseignement, médecine de terrain).
