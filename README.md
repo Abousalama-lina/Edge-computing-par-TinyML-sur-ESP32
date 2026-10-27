@@ -1,17 +1,10 @@
-# Nom du projet
+# Edge-computing-par-TinyML-sur-ESP32
 
-> [!IMPORTANT]
-> **À modifier** : ce repo a été créé depuis le template de projet du MakerSpace d'Amiens.
-> Remplacez ce README par la présentation de votre projet.
-> Les guides d'utilisation du template sont sur le
-> [site de documentation du MakerSpace](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/).
+Un modèle entraîné sur PC, déployé sur un ESP32, qui analyse leun modèle de classification entraîné sur PC puis compressé et déployé sur un microcontrôleur ESP32, qui analyse le flux de la caméra en temps réel, directement sur la puce et sans aucune connexion réseau. flux de la caméra en temps réel et sans connexion réseau.
 
-Une phrase qui explique ce que fait le projet et pour qui.
-
-- **Documentation :** [site du projet](https://makerspace-amiens.github.io/template-project/) (sources dans [`docs/`](docs/))
-- **Fichiers du projet :** [`project/`](project/) (CAO, électronique, code)
+- **Documentation :** https://github.com/Abousalama-lina/Edge-computing-par-TinyML-sur-ESP32
 
 ## Équipe
 
-- Prénom Nom
-- Prénom Nom
+- Réalisée par Abousalama Lina 
+- Encadré par Pr. Jérôme Gorin 
