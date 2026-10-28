@@ -7,14 +7,9 @@ has_children: true
 
 # Journal de bord
 
-{: .a_supprimer }
-> Chaque membre de l'équipe tient **son propre** journal : une page par séance de
-> travail, pendant les heures prévues **ou en dehors**. 5 à 10 minutes en fin de
-> séance suffisent.
->
 > **Ajouter une séance :**
 > 1. copiez le fichier `docs/journal/_modele-seance.md` dans **votre** dossier
->    (par exemple `docs/journal/etudiant-1/`) ;
+>    (par exemple `docs/journal/Lina/`) ;
 > 2. renommez la copie avec la date du jour : `2026-09-23.md` ;
 > 3. remplissez l'en-tête (`title`, `parent`) et les trois rubriques.
 >
